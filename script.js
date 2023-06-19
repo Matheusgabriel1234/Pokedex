@@ -23,11 +23,12 @@ const renderPoke = async (pokemon)=>{
     PokemonName.innerHTML = data.name
     pokemonNumber.innerHTML = data.id
     Pokemonimage.src = data["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_default"]
-
+    searchPokemon = data.id
     inputSearch.value = ""
     } else{
         PokemonName.innerHTML = "Not found"
         pokemonNumber.innerHTML=""
+        Pokemonimage.style.display = "none"
     }
 }
 
